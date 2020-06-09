@@ -4,6 +4,13 @@ terraform {
   backend "azurerm" {
   }
 }
+provider "azurerm" {
+version = "~> 2.13"
+features {}
+}
+provider "random" {
+version = "~> 2.2"
+}
 
 variable "resource_group_name" {
   default = "tailspin-space-game-rg"
